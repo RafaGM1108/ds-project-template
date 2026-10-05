@@ -13,14 +13,15 @@
 
 1. On GitHub, click **Use this template → Create a new repository**, then clone it.
 2. Rename the placeholder package. Everything that needs renaming is spelled
-   `ds_project` (Python package), `ds-project` (distribution / repo name) or
+   `ds_project` (Python package), `ds-project` (distribution / repo name, used in URLs) or
    `DS_PROJECT` (environment variable prefix). On Linux:
 
    ```bash
-   NEW=rent_predictor  # snake_case package name
-   git mv src/ds_project "src/$NEW"
+   PKG=rent_predictor        # snake_case package name
+   REPO=rent-price-predictor # GitHub repo name
+   git mv src/ds_project "src/$PKG"
    grep -rlE 'ds_project|ds-project|DS_PROJECT' --exclude-dir={.git,.venv} . \
-     | xargs sed -i "s/ds_project/$NEW/g; s/ds-project/${NEW//_/-}/g; s/DS_PROJECT/${NEW^^}/g"
+     | xargs sed -i "s/ds_project/$PKG/g; s/ds-project/$REPO/g; s/DS_PROJECT/${PKG^^}/g"
    uv lock
    make install
    make lint typecheck test
@@ -29,10 +30,13 @@
    On macOS use `sed -i ''` instead of `sed -i`.
 3. Fill in every `TODO` (`grep -rn TODO .`), starting with this README and the
    **Project** section of `CLAUDE.md`.
-4. Create the GitHub Project (Backlog, Ready, In Progress, In Review, Done, plus
+4. Create the labels (they are not copied from the template): `type:feat`, `type:data`,
+   `type:analysis`, `type:model`, `type:docs`, `type:test`, `type:ci`, `type:bug` and `phase`.
+5. Create the GitHub Project (Backlog, Ready, In Progress, In Review, Done, plus
    **Priority** and **Size** fields), link it to the repo, and create one milestone per
    roadmap phase.
-5. Add a `CODECOV_TOKEN` repository secret so coverage uploads work.
+6. Make sure the [Codecov GitHub App](https://github.com/apps/codecov) has access to the
+   repo. Uploads authenticate with OIDC, so no token secret is needed.
 
 ## Overview
 

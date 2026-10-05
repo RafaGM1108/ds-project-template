@@ -2,7 +2,7 @@
 
 ## Conventions
 
-### Workflow
+### Kanban workflow
 
 1. Work is tracked in the GitHub Project linked to this repo. Status columns: Backlog,
    Ready, In Progress, In Review, Done. WIP limit: at most 2 items In Progress.

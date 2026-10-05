@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Codecov uploads authenticate with OIDC instead of a token secret and fail the CI on error;
+  added `codecov.yml` with 80% project and patch targets (#3).
+- Dependabot no longer proposes major/minor Python bumps of the Docker base image (#3).
+- README rename procedure takes separate package and repo names; setup steps list the labels
+  to create and the Codecov app (#3).
+- Issue forms apply `type:feat` and `type:bug`; CLAUDE.md workflow heading renamed to
+  "Kanban workflow" (#3).
+
 ### Added
 
 - Initial project template: layered data folders, staged notebooks, `ds_project` package

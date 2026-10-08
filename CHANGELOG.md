@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Author name is Rafael E. Garcia (#5).
+
+### Changed
+
 - Codecov uploads authenticate with OIDC instead of a token secret and fail the CI on error;
   added `codecov.yml` with 80% project and patch targets (#3).
 - Dependabot no longer proposes major/minor Python bumps of the Docker base image (#3).

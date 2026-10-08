@@ -1,6 +1,6 @@
 site_name: ds-project
 site_description: TODO
-site_author: Rafael García Montes
+site_author: Rafael E. Garcia
 repo_url: https://github.com/RafaGM1108/ds-project
 theme:
   name: material

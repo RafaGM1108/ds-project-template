@@ -132,7 +132,7 @@ ruff · mypy · bandit · pre-commit · GitHub Actions · Docker · MkDocs Mater
 
 ## Author
 
-**Rafael García Montes**
+**Rafael E. Garcia**
 
 - GitHub: [@RafaGM1108](https://github.com/RafaGM1108)
 - LinkedIn: [linkedin.com/in/rafaelgarcia11](https://www.linkedin.com/in/rafaelgarcia11)
